@@ -1,0 +1,472 @@
+/* --- GENERAL SETTINGS --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Soft blush pink from the logo */
+    background-color: #fcf0ee;
+    color: #1a1a1a;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #333333;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+/* --- HEADER & NAVIGATION --- */
+/* --- HEADER & NAVIGATION --- */
+.header-container {
+    padding: 40px 20px;
+    border-bottom: 1px solid #e8d5d3;
+    background-color: #f8e6e4; /* Added to match the other sections */
+}
+
+.Titulli h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%; 
+    /* Removed gold border, kept it clean or added a thin dark one */
+    border: 2px solid #1a1a1a;
+    margin: 20px 0;
+}
+
+.Butonat {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.Butonat p {
+    cursor: pointer;
+    color: #1a1a1a;
+    transition: color 0.3s, border-bottom 0.3s;
+    margin: 0; 
+    text-transform: uppercase;
+}
+
+.Butonat p:hover {
+    color: #555555; 
+    border-bottom: 1px solid #1a1a1a;
+}
+
+/* --- HERO & ABOUT SECTIONS --- */
+.Catch-Line {
+    padding: 80px 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    /* Removed heavy text shadow for a cleaner look */
+    text-shadow: none; 
+}
+
+.Catch-Line::after {
+    content: "";
+    display: block;
+    width: 200px;              /* How long the line is */
+    height: 1px;               /* How thick the line is */
+    background-color: #000000; /* Black color to match the theme */
+    margin: 40px auto 0;       /* Centers the line and adds space above it */
+}
+
+.About-Section {
+    padding: 60px 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.About-Section h2 {
+    font-size: 3.5rem;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.AroundTekst p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #333333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- SCROLLING GALLERY (FIXED) --- */
+.Gallery-Section {
+    padding: 50px 0;
+    overflow: hidden; 
+    position: relative;
+    width: 100%;
+    background-color: #fcf0ee;
+}
+
+.Imazhet {
+    display: flex;
+    gap: 20px;
+    width: max-content; 
+    animation: galleryScroll 30s linear infinite; 
+}
+
+.Imazhet:hover {
+    animation-play-state: paused;
+}
+
+.Imazhet img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 40px;
+    flex-shrink: 0; 
+    flex-grow: 0;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.Imazhet img:hover {
+    transform: scale(1.05);
+    border-color: #000000;
+    z-index: 10; 
+}
+
+@keyframes galleryScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* --- MENU SECTION --- */
+.Menu-Section {
+    padding: 80px 20px;
+    /* Slightly different pink to separate sections */
+    background-color: #f8e6e4; 
+}
+
+.Menu-Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.Menu-Card {
+    background: #ffffff;
+    border: 1px solid #e8d5d3;
+    padding: 40px 20px;
+    border-radius: 20px;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.Menu-Card:hover {
+    transform: translateY(-10px);
+    border-color: #000000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.Card-Icon {
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.Price {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* --- CONTACT SECTION --- */
+
+.Contact-Split-Section {
+    display: flex;         
+    flex-direction: row;   
+    width: 100%;
+    min-height: 650px;     
+    background-color: #f8e6e4; /* Updated to match the Menu Section */
+    border-top: 1px solid #e8d5d3;
+}
+
+.Map-Container-Left {
+    width: 50%;            
+    position: relative;    
+    padding: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Map-Container-Left iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    border: none;
+    border-radius: 20px; 
+    /* Removed the invert filter so the map looks natural but soft */
+    filter: grayscale(100%) contrast(90%); 
+}
+
+.Review-Container-Right {
+    width: 50%;            
+    position: relative;
+    padding: 40px; 
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+    border-left: 1px solid #e8d5d3;
+}
+
+.Form-Wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #e8d5d3; 
+    border-radius: 20px; 
+    padding: 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.Form-Subtitle {
+    text-align: center;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    color: #000000;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    background-color: #fafafa;
+    border: 1px solid #cccccc;
+    color: #1a1a1a;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 25px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+button, #submit-to-google {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px 40px;
+    background-color: transparent;
+    border: 2px solid #000000;
+    color: #000000;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+}
+
+button:hover, #submit-to-google:hover {
+    background-color: #000000;
+    color: #fcf0ee;
+    transform: translateY(-2px);
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.star-rating input { display: none; }
+
+.star-rating label {
+    font-size: 2rem;
+    color: #cccccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #000000;
+}
+
+.Map-Overlay-Info {
+    position: absolute;
+    bottom: 60px; 
+    left: 60px;   
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-left: 3px solid #000000;
+    border-radius: 0 10px 10px 0;
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.Map-Overlay-Info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #333333;
+    text-align: left;
+}
+
+.Map-Overlay-Info i {
+    color: #000000;
+    width: 20px;
+}
+
+.Social-Section {
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #e8d5d3;
+    background-color: #fcf0ee;
+}
+
+.Social-Icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-link {
+    color: #000000 !important;
+    font-size: 3rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    color: #555555 !important;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #666666;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .Contact-Split-Section {
+        flex-direction: column; 
+    }
+    .Map-Container-Left, .Review-Container-Right {
+        width: 100%;
+        min-height: 400px;
+        padding: 20px;
+    }
+    .Map-Overlay-Info {
+        left: 30px;
+        bottom: 30px;
+    }
+    .Review-Container-Right {
+        border-left: none;
+        border-top: 1px solid #e8d5d3;
+    }
+}
+
+/* --- LIGHTBOX (POPUP WINDOW) --- */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Changed to a frosted light overlay */
+    background: rgba(252, 240, 238, 0.95); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; 
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border: 3px solid #000000;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.lightbox-overlay.visible .lightbox-img {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #000000;
+    font-size: 50px;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.lightbox-close:hover {
+    color: #555555;
+}

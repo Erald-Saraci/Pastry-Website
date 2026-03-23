@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASTICERI MARJANAKU</title>
+    
+    <link rel="stylesheet" href="PasticeriDesign.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="header-container">
+        <div class="Titulli">
+            <h1>PASTICERI MARJANAKU</h1>
+        </div>
+
+        <img src="Logoja2.jpg" alt="Logoja" class="logo-img">
+        
+        <div class="Butonat">
+    <p onclick="window.open('menu.html','_blank')">Menu</p>
+    <p>Evente</p>
+    <p>Specialitete</p>
+    <p>Kontakt</p>
+</div>
+
+    </div>
+
+    <div class="Catch-Line">
+        <p>"Ku ëmbëlsia takon përvojën"</p>
+    </div>
+
+    <div class="Gallery-Section">
+        <h2>GALERIA JONË</h2>
+        <div class="Imazhet">
+            <img src="Imazhi1.jpeg" alt="Cake 1">
+            <img src="Imazhi2.jpeg" alt="Cake 2">
+            <img src="Imazhi3.jpeg" alt="Cake 3">
+            <img src="Imazhi4.jpeg" alt="Cake 4">
+            <img src="Imazhi5.jpeg" alt="Cake 5">
+            <img src="Imazhi6.jpeg" alt="Cake 6">
+            <img src="Imazhi7.jpeg" alt="Cake 7">
+            <img src="Imazhi8.jpeg" alt="Cake 8">
+            <img src="Imazhi9.jpeg" alt="Cake 9">
+        </div>
+    </div>
+
+    <div id="menu-anchor" class="Menu-Section">
+        <h2>SPECIALITETET TONA</h2>
+        <div class="Menu-Grid">
+            <div class="Menu-Card">
+                <div class="Card-Icon"><i class="fas fa-birthday-cake"></i></div>
+                <h3>Torta Ditëlindjesh</h3>
+                <p>Personalizime unike për ditën tuaj më të veçantë. Shije të paharrueshme me dizajn modern.</p>
+                <span class="Price">Nga 1500 LEK</span>
+            </div>
+
+            <div class="Menu-Card">
+                <div class="Card-Icon"><i class="fas fa-cookie-bite"></i></div>
+                <h3>Bakllava Tradicionale</h3>
+                <p>Receta e vjetër me arra të zgjedhura dhe sherbet natyral. Krenaria jonë.</p>
+                <span class="Price">1200 LEK / kg</span>
+            </div>
+
+            <div class="Menu-Card">
+                <div class="Card-Icon"><i class="fas fa-ice-cream"></i></div>
+                <h3>Trileçe & Akullore</h3>
+                <p>Ëmbëlsira të ftohta për ditët e nxehta. Kremoze dhe të freskëta çdo ditë.</p>
+                <span class="Price">200 LEK</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="About-Section">
+        <h2>RRETH NESH</h2>
+        <div class="AroundTekst">
+            <p>
+                Tradita takon modernizimin në çdo detaj të Pasticeri Marjanaku. Me mbi dy dekada përvojë në zemër të Durrësit, ne shërbejmë ëmbëlsi që krijon kujtime të bukura.
+            </p>
+        </div>
+    </div>
+
+    <div class="Contact-Split-Section">
+        
+        <div class="Map-Container-Left">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.470641335206!2d19.4481803!3d41.3203782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134fdb4891a976d1%3A0xb546d274a77f59fa!2sPasti%C3%A7eri%20Marjanaku!5e0!3m2!1sen!2s!4v1771312405976!5m2!1sen!2s" width="800" height="600" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            <div class="Map-Overlay-Info">
+                <h3>NA VIZITONI</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rruga Kasem Durrësi, Durrës</p>
+                <p><i class="fas fa-phone"></i> +355 067 614 7539</p>
+                <p><i class="fas fa-clock"></i> 06:00 - 20:30 (Hënë - Shtunë)</p>
+                <p><i class="fas fa-calendar-day"></i> 06:00 - 14:00 (E Diel)</p>
+            </div>
+        </div>
+
+        <div class="Review-Container-Right">
+            <div class="Form-Wrapper">
+                <h2>Lini një Vlerësim</h2>
+                <p class="Form-Subtitle">Na tregoni eksperiencën tuaj!</p>
+                
+                <form>
+                    <label for="username">Emri:</label>
+                    <input type="text" id="username" placeholder="Emri Juaj" required>
+
+                    <label>Vlerësimi:</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5" class="fas fa-star"></label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" class="fas fa-star"></label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" class="fas fa-star"></label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" class="fas fa-star"></label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" class="fas fa-star"></label>
+                    </div>
+                    
+                    <textarea id="user-review-text" rows="4" placeholder="Shkruani këtu..."></textarea>
+
+                    <button type="button" id="submit-to-google">KOPJO & DËRGO NË GOOGLE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer-anchor" class="Social-Section">
+        <h3>Na ndiqni</h3>
+        <div class="Social-Icons">
+            <a href="https://www.instagram.com/pasticeri_marjanaku?igsh=a3ZqZnFpcGJtOXM5" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/share/173tr5GwLW/?mibextid=wwXIfr" target="_blank" class="social-link">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@pasticeri.marjanaku?_r=1&_t=ZS-93olPBqJ9G4" target="_blank" class="social-link">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pasticeri.marjanaku2017@gmail.com" target="_blank" class="social-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p class="copyright">© 2026 Pasticeri Marjanaku. Të gjitha të drejtat e rezervuara.</p>
+    </footer>
+
+    <script src="PasticeriFunksionalitet.js"></script>
+</body>
+</html>
